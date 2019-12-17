@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>My Website</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: rgba(255,255,255, 0.9);
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(255,255,255, 0.9);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 0px;
+}
+.html-widget {
+  margin-bottom: 0px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+  text-align:center;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.section h2 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.section h3 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.section h4 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.section h5 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.section h6 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+  border-radius: 0 0px 0px 0px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: rgba(255,255,255, 0.9);
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: rgba(255,255,255, 0.9);
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: rgba(255,255,255, 0.9);
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}/
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<!-- tabsets -->
+
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-dark   navbar-fixed-top" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>-->
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+<!--  <a href="index.html">What is MARLE?</a>
+</li>
+<li>
+  <a href="about.html"></a>
+</li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<center><img src="https://i.imgur.com/OoJL8Nx.png" alt="MARLE"><center>
+
+<h1 class="title toc-ignore"> What is MARLE? </h1>
+
+</div>
+
+<font size="5">
+
+<p>The <b>M</b>omentary <b>A</b>ssessment of <b>R</b>esearch <b>L</b>earning <b>E</b>nvironments or <b>MARLE</b> Project is a research study funded by the National Science Foundation slated to start in January 2020.<p>
+
+<p>In this research study, we hope to get a better understanding of how course-based undergraduate research experiences (CUREs) or independent undergraduate research experiences (UREs) contribute to students' interests in pursuing a career in science.</p>
+
+<p><p>
+
+<p><p>
+
+<br>
+
+<center><h1 class="title toc-ignore"> How can you help?</h1></center>
+
+<p><p>
+The MARLE Project is currently recruiting undergraduates in CUREs or UREs to participate in this study over the course of their research experience. 
+<br>
+<br>
+As a participant in the MARLE Project, you will be tasked with filling out <b>3</b> surveys a week sent via text message.
+
+The benefits of participating in the MARLE Project include:
+
+<li> Earning $25 per month for responding to short text surveys about your research experiences </li>
+
+<li> Contributing to the science of research experiences </li>
+
+<li> Helping make research experiences valuable for future students </li>
+<br>
+
+<center><img src="https://i.imgur.com/W0r8BQY.png" alt="MARLE"><center>
+<br>
+<br>
+
+<center><h1 class="title toc-ignore">How can you participate?</h1></center>
+
+To sign up to become a MARLE participant, click <b><a href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_cvSkfTpZ3HHljDL">here</a></b> to fill out a sign-up survey.
+<br>
+<br>
+
+<center><h1 class="title toc-ignore">Want more information?</h1></center>
+
+Click <b><a href="mailto:eldolan@uga.edu">here</a></b> contact the MARLE team about any questions regarding this study.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
